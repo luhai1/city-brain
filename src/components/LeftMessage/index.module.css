@@ -1,0 +1,16 @@
+.LeftMessage{
+  width: 40%;
+  /* height: 100%; */
+  /* background: chartreuse; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.LeftMessage_top{
+  height: 59%;
+}
+
+.LeftMessage_bottom{
+  height: 38%;
+}

@@ -1,0 +1,49 @@
+{
+    "message": "",
+    "data": {
+        "buy": {
+            "value": "2",
+            "value_unit": "亿元",
+            "type": "drop",
+            "range": "39.01%"
+        },
+        "repay": {
+            "value": "58",
+            "value_unit": "亿元",
+            "type": "rise",
+            "range": "7.17%"
+        },
+        "rent": {
+            "value": "19",
+            "value_unit": "亿元",
+            "type": "rise",
+            "range": "32.52%"
+        },
+        "year": {
+            "value": "89",
+            "value_unit": "亿元",
+            "type": "rise",
+            "range": "10.64%"
+        },
+        "draw_type": [
+            {
+                "name": "购房",
+                "value": "2.62%"
+            },
+            {
+                "name": "租赁",
+                "value": "21.58%"
+            },
+            {
+                "name": "还贷",
+                "value": "65.33%"
+            },
+            {
+                "name": "其它",
+                "value": "10.47%"
+            }
+        ]
+    },
+    "code": "00000",
+    "success": true
+}

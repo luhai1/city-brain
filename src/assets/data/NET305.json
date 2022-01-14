@@ -1,0 +1,52 @@
+{
+    "message": "",
+    "data": {
+        "count_loan": {
+            "year": {
+                "value": "49",
+                "value_unit": "亿元",
+                "type": "rise",
+                "range": "9.77%"
+            },
+            "house": {
+                "value": "8962",
+                "value_unit": "户",
+                "type": "rise",
+                "range": "5.76%"
+            },
+            "save": {
+                "value": "73",
+                "value_unit": "亿元"
+            },
+            "area": {
+                "value": "93",
+                "value_unit": "万㎡",
+                "type": "rise",
+                "range": "8.55%"
+            },
+            "balance": {
+                "value": "872",
+                "value_unit": "亿元",
+                "type": "rise",
+                "range": "129",
+                "range_unit": "亿元"
+            }
+        },
+        "avg_loan": {
+            "num": {
+                "value": "55",
+                "value_unit": "万元"
+            },
+            "area": {
+                "value": "104",
+                "value_unit": "㎡"
+            },
+            "time": {
+                "value": "26",
+                "value_unit": "年"
+            }
+        }
+    },
+    "code": "00000",
+    "success": true
+}
