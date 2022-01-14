@@ -1,4 +1,7 @@
+import React ,{useEffect} from 'react'
+
 import styles from './index.module.css'
+
 import ComHead from '../../components/ComHead'
 import TopMessage from '../../components/TopMessage'
 import LeftMessage from '../../components/LeftMessage'
@@ -6,8 +9,18 @@ import CentreMessage from '../../components/CentreMessage'
 import RightMessage from '../../components/RightMessage'
 import BottomMessage from '../../components/BottomMessage'
 
+import {api10000006567} from '../../api/index'
 
 function Home() {
+  // const [datas,setDatas] =useState()
+
+  useEffect(()=>{
+    api10000006567().then((res)=>{
+      console.log(res);
+    })
+  },[])
+
+
   return (
     <div className={styles.home}>
       <div className={styles.top_head}>

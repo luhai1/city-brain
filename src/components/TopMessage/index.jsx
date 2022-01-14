@@ -9,7 +9,7 @@ function ComHead() {
         BorderBox13
       </BorderBox13>
 
-      <BorderBox12 reverse="{true}" className={styles.com_head_right}>
+      <BorderBox12 reverse={true} className={styles.com_head_right}>
         BorderBox12
       </BorderBox12>
     </div>
