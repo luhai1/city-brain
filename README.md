@@ -29,13 +29,10 @@
 ├── src
 │   ├── assets               # 本地静态资源
 │   ├── components           # 业务通用组件
-│   ├── e2e                  # 集成测试用例
 │   ├── layouts              # 通用布局
-│   ├── models               # 全局 dva model
 │   ├── pages                # 业务页面入口和常用模板
 │   ├── services             # 后台接口服务
-│   ├── utils                # 工具库
-│   └── global.less          # 全局样式
+│   └── utils                # 工具库
 ├── README.md
 └── package.json
 ```
@@ -49,7 +46,6 @@ src
 └── pages
     ├── Welcome        // 路由组件下不应该再包含其他路由组件，基于这个约定就能清楚的区分路由组件和非路由组件了
     |   ├── components // 对于复杂的页面可以再自己做更深层次的组织，但建议不要超过三层
-    |   ├── Form.tsx
     |   ├── index.tsx  // 页面组件的代码
     |   └── index.less // 页面样式
     ├── Order          // 路由组件下不应该再包含其他路由组件，基于这个约定就能清楚的区分路由组件和非路由组件了

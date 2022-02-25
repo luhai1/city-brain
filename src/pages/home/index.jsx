@@ -1,44 +1,45 @@
-import React ,{useEffect} from 'react'
+import React, { useEffect } from 'react'
+import styles from './index.module.less'
+import NarBar from '../../components/NavBar'
+import { GeneralOverview } from "./components/GeneralOverview/index"
+import { TerrainClass } from "./components/TerrainClass/index"
+import { Map } from "./components/Map/index"
+import { ConstructionLand } from "./components/ConstructionLand/index"
+import { Plough } from "./components/Plough/index"
+import { City } from "./components/City/index"
+import { GreenCoverage } from "./components/GreenCoverage/index"
 
-import styles from './index.module.css'
 
-import ComHead from '../../components/ComHead'
-import TopMessage from '../../components/TopMessage'
-import LeftMessage from '../../components/LeftMessage'
-import CentreMessage from '../../components/CentreMessage'
-import RightMessage from '../../components/RightMessage'
-import BottomMessage from '../../components/BottomMessage'
+
+
 
 function Home() {
   // const [datas,setDatas] =useState()
 
-  useEffect(()=>{
-    // api10000006567().then((res)=>{
-    //   console.log(res);
-    // })
-    console.log('31');
-  },[])
+  // useEffect(()=>{
+  //   console.log('31');
+  // },[])
 
 
   return (
     <div className={styles.home}>
-      <div className={styles.top_head}>
-        <ComHead></ComHead>
-      </div>
+      <NarBar></NarBar>
+      <ul className={styles.mainContent}>
+        <li className={styles.left}>
+          <GeneralOverview></GeneralOverview>
+          <TerrainClass></TerrainClass>
+        </li>
+        <li className={styles.centre}>
+          <Map></Map>
+          <ConstructionLand></ConstructionLand>
+        </li>
+        <li className={styles.right}>
+          <Plough></Plough>
+          <City></City>
+          <GreenCoverage></GreenCoverage>
+        </li>
+      </ul>
 
-      <div className={styles.top}>
-        <TopMessage></TopMessage>
-      </div>
-
-      <div className={styles.centre}>
-        <LeftMessage></LeftMessage>
-        <CentreMessage></CentreMessage>
-        <RightMessage></RightMessage>
-      </div>
-
-      <div className={styles.bottom}>
-        <BottomMessage></BottomMessage>
-      </div>
     </div>
   );
 }

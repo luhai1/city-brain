@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as echarts from "echarts/lib/echarts";
 import App from './App';
-import './styles/globle.css'
+import './styles/globle.less'
 
 ReactDOM.render(
   <React.StrictMode>
