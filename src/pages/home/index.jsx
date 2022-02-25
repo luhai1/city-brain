@@ -9,15 +9,14 @@ import CentreMessage from '../../components/CentreMessage'
 import RightMessage from '../../components/RightMessage'
 import BottomMessage from '../../components/BottomMessage'
 
-import {api10000006567} from '../../api/index'
-
 function Home() {
   // const [datas,setDatas] =useState()
 
   useEffect(()=>{
-    api10000006567().then((res)=>{
-      console.log(res);
-    })
+    // api10000006567().then((res)=>{
+    //   console.log(res);
+    // })
+    console.log('31');
   },[])
 
 
