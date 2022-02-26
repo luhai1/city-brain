@@ -105,7 +105,7 @@ export const ConstructionLand = () => {
   return (
     <div className={styles.constructionLand}>
     <BorderBox title={'建设用地'} >
-        <div id="ConstructionLand" style={{ width: '100%', height: 300 }}> </div>
+        <div id="ConstructionLand" style={{ width: '100%', height: "90%" }}> </div>
       </BorderBox>
     </div>
   )

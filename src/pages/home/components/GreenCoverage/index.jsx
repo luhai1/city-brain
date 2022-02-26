@@ -41,7 +41,7 @@ export const GreenCoverage = () => {
   return (
     <div className={styles.GreenCoverage}>
       <BorderBox title={'城市建成区绿化覆盖率及绿地率'} >
-        <div id="mai" style={{ width: '100%', height: 180 }}> </div>
+        <div id="mai" style={{ width: '100%', height: '100%' }}> </div>
       </BorderBox>
     </div>
   )
