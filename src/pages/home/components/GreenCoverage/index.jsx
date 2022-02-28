@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styles from './index.module.less'
 import { BorderBox } from '../../../../components/BorderBox/index'
 import * as echarts from "echarts/lib/echarts";
@@ -6,25 +6,34 @@ import * as echarts from "echarts/lib/echarts";
 export const GreenCoverage = () => {
 
   useEffect(() => {
-    var myChart = echarts.init(document.getElementById("mai"), 'dark');
+    var myChart = echarts.init(document.getElementById("GreenCoverage"));
     myChart.setOption(
       {
-
         legend: {
-          top: '5%',
-          left: 'center'
+          top: '0%',
+          left: 'center',
+          textStyle: {
+            color: '#fff'  // 图例文字颜色
+          }
         },
         series: [
           {
             name: 'Access From',
             type: 'pie',
-            radius: ['20%', '40%'],
+            radius: ['14%', '30%'],
+            label: {
+              normal: {
+                textStyle: {
+                  color: '#fff'
+                }
+              },
+            },
             avoidLabelOverlap: false,
             itemStyle: {
-              borderRadius: 10,
+              borderRadius: 4,
               borderColor: '#fff',
-              borderWidth: 2
-            },  
+              borderWidth: 1
+            },
             data: [
               { value: 1048, name: '生产绿地' },
               { value: 735, name: '附属绿地' },
@@ -34,14 +43,14 @@ export const GreenCoverage = () => {
           }
         ]
       }
-    
+
     );
   }, [])
 
   return (
     <div className={styles.GreenCoverage}>
       <BorderBox title={'城市建成区绿化覆盖率及绿地率'} >
-        <div id="mai" style={{ width: '100%', height: '100%' }}> </div>
+        <div id="GreenCoverage" style={{ width: '100%', height: '90%' }}> </div>
       </BorderBox>
     </div>
   )

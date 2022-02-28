@@ -18,6 +18,7 @@ export const GeneralOverview = () => {
         { value: 110, name: '草地' },
         { value: 150, name: '园林' },
         { value: 100, name: '商业服务业用地' },
+        { value: 232, name: '耕地' },
         { value: 150, name: '工矿存储用地' },
         { value: 90, name: '住宅用地' },
         { value: 150, name: '特殊用地' },
@@ -28,13 +29,24 @@ export const GeneralOverview = () => {
 
     ])
 
-    const [celldata, steCelldata] = useState(['林地',
-        '草地', '园林', '商业服务业用地', '耕地',
-        '工矿存储用地', '住宅用地', '特殊用地', '公共管理与公共服务用地',
-        '交通运输用地', '水域及水利设施用地', '其他土地'])
+
+        const celldata =[
+            {name:'林地'},
+            {name:'草地'},'\n',
+            {name:'园林'},
+            {name:'商业服务业用地'},'\n',
+            {name:'耕地'},
+            {name:'工矿存储用地'},'\n',
+            {name:'住宅用地'},
+            {name:'特殊用地'},'\n',
+            {name:'公共管理与公共服务用地'},
+            {name:'交通运输用地'},'\n',
+            {name:'水域及水利设施用地'},
+            {name:'其他土地'},
+        ]
 
     useEffect(() => {
-        var myChart = echarts.init(document.getElementById("main"), 'dark');
+        var myChart = echarts.init(document.getElementById("main"));
         myChart.setOption(
             {
                 title: {
@@ -42,9 +54,13 @@ export const GeneralOverview = () => {
                     left: 'center'
                 },
                 legend: {
-                    left: 'center',
+                    // left: 'center',
                     top: 'bottom',
-                    data: celldata
+                    // width: '100%',
+                    data: celldata,
+                    textStyle: {
+                        color: '#fff'  // 图例文字颜色
+                    }
                 },
                 toolbox: {
                     show: false,
@@ -64,7 +80,7 @@ export const GeneralOverview = () => {
                         name: '总体概览',
                         type: 'pie',
                         radius: [10, 50],
-                        center: ['70%', '40%'],
+                        center: ['74%', '20%'],
                         roseType: 'area',
                         itemStyle: {
                             borderRadius: 4,
@@ -89,7 +105,7 @@ export const GeneralOverview = () => {
     return (
         <div className={styles.generalOverview} >
             <BorderBox title={'总体概览'} time={'( 2021年 )'}>
-                <div id="main" style={{ width: '100%', height: 300 }}> </div>
+                <div id="main" style={{ width: '100%', height: 280 }}> </div>
             </BorderBox>
         </div>
     )

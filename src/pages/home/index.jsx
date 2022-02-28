@@ -9,10 +9,6 @@ import { Plough } from "./components/Plough/index"
 import { City } from "./components/City/index"
 import { GreenCoverage } from "./components/GreenCoverage/index"
 
-
-
-
-
 function Home() {
   // const [datas,setDatas] =useState()
 
@@ -39,7 +35,6 @@ function Home() {
           <GreenCoverage></GreenCoverage>
         </li>
       </ul>
-
     </div>
   );
 }

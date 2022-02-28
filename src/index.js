@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as echarts from "echarts/lib/echarts";
-import App from './App';
+import Router   from './router'
 import './styles/globle.less'
 
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  // </React.StrictMode>,
+ <Router/>,
   document.getElementById('root')
 );

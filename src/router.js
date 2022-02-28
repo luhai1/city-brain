@@ -1,16 +1,21 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import Login from './pages/login';
-function Router() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Counter} />
-        <Route path="/book" component={Book} />
-      </Switch>
-    </Router>
-  );
-}
+import Home from './pages/home';
 
-export default Router;
+const BasicRoute = () => {
+  return (
+      <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+  )
+}
+export default BasicRoute;
