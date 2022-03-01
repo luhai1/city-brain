@@ -5,11 +5,10 @@ import { BorderBox } from '../../../../components/BorderBox/index'
 
 // 引入ECharts主模块 
 import * as echarts from "echarts/lib/echarts";
-// 引入饼状图需要的模块 
-import "echarts/lib/chart/pie";
-import "echarts/lib/component/title";
-import "echarts/lib/component/tooltip";
-import "echarts/lib/component/legend";
+
+import imgURL1 from '../../../../assets/image/农用地.png';
+import imgURL2 from '../../../../assets/image/建设用地.png';
+import imgURL3 from '../../../../assets/image/未利用地.png';
 
 export const GeneralOverview = () => {
 
@@ -30,20 +29,20 @@ export const GeneralOverview = () => {
     ])
 
 
-        const celldata =[
-            {name:'林地'},
-            {name:'草地'},'\n',
-            {name:'园林'},
-            {name:'商业服务业用地'},'\n',
-            {name:'耕地'},
-            {name:'工矿存储用地'},'\n',
-            {name:'住宅用地'},
-            {name:'特殊用地'},'\n',
-            {name:'公共管理与公共服务用地'},
-            {name:'交通运输用地'},'\n',
-            {name:'水域及水利设施用地'},
-            {name:'其他土地'},
-        ]
+    const celldata = [
+        { name: '林地' },
+        { name: '草地' }, '\n',
+        { name: '园林' },
+        { name: '商业服务业用地' }, '\n',
+        { name: '耕地' },
+        { name: '工矿存储用地' }, '\n',
+        { name: '住宅用地' },
+        { name: '特殊用地' }, '\n',
+        { name: '公共管理与公共服务用地' },
+        { name: '交通运输用地' }, '\n',
+        { name: '水域及水利设施用地' },
+        { name: '其他土地' },
+    ]
 
     useEffect(() => {
         var myChart = echarts.init(document.getElementById("main"));
@@ -106,6 +105,32 @@ export const GeneralOverview = () => {
         <div className={styles.generalOverview} >
             <BorderBox title={'总体概览'} time={'( 2021年 )'}>
                 <div id="main" style={{ width: '100%', height: 280 }}> </div>
+                <ul className={styles.content}>
+                    <li>
+                        <div>
+                            <img className={styles.img} src={imgURL1} alt="" />
+                        </div>
+                        <div className={styles.text}>农用地</div>
+                        <div className={styles.number}>12112</div>
+                        <div className={styles.text}>公顷</div>
+                    </li>
+                    <li>
+                        <div>
+                            <img className={styles.img} src={imgURL2} alt="" />
+                        </div>
+                        <div className={styles.text}>建设用地</div>
+                        <div className={styles.number}>12112</div>
+                        <div className={styles.text}>公顷</div>
+                    </li>
+                    <li>
+                        <div>
+                            <img className={styles.img} src={imgURL3} alt="" />
+                        </div>
+                        <div className={styles.text}>未利用地</div>
+                        <div className={styles.number}>12112</div>
+                        <div className={styles.text}>公顷</div>
+                    </li>
+                </ul>
             </BorderBox>
         </div>
     )

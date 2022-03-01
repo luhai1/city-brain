@@ -17,7 +17,7 @@ const NavBar = () => {
         <div className={styles.navBar}>
             <div className={styles.navBarTitle}>自然资源调查检测管理和决策分析智库</div>
             <div className={styles.navBarMenu}>
-                <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal" >
+                <Menu mode={'horizontal'} onClick={handleClick} selectedKeys={[current]} mode="horizontal" >
                     <Menu.Item key="mail">
                         首页
                     </Menu.Item>
